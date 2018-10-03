@@ -3,6 +3,11 @@ Gui for select image pixel reference for iTree3DMap. This program uses the contr
 
 ----------------
 
+## Dependencies
+* OpenMVG
+* Cereal
+* runit
+
 
 ## Compile
      cmake ../
