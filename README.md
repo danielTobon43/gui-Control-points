@@ -5,9 +5,9 @@ Gui for select image pixel reference for iTree3DMap. This program uses the contr
 
 
 ## Compile
-  cmake ../
-  make
+     cmake ../
+     make
 
 
 ## Test
-  usage: ./control_point_Reg <sfm data bin/xml> <output dir>
+    usage: ./control_point_Reg <sfm data bin/xml> <output dir>
