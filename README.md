@@ -3,6 +3,9 @@ Gui for select image pixel reference for iTree3DMap. This program uses the contr
 
 ----------------
 
+## GUI
+<img src="./example/control.png" align="center" height="500" width="640"><br>
+
 ## Dependencies
 * OpenMVG
 * Cereal
