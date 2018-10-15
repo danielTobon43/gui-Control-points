@@ -32,6 +32,7 @@ int main(int argc, char ** argv){
 }
 
   MainWindow * mainWindow = new MainWindow(argc,argv);
+  mainWindow->setWindowFlags(Qt::WindowTitleHint | Qt::WindowMinimizeButtonHint);
   mainWindow->move(0,0);
   mainWindow->setFixedSize(640,480);
   mainWindow->show();
