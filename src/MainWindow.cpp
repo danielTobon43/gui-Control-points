@@ -137,7 +137,7 @@ MainWindow::MainWindow(int argc,char** argv,QWidget * parent): QMainWindow(){
 
   setWindowTitle(tr("Control_point_editor"));
 
-  QMainWindow::statusBar()->showMessage("Choose an image pattern reference and then exit the GUI.");
+  QMainWindow::statusBar()->showMessage("Choose an image pattern reference and then press [OK].");
 
 }
 
