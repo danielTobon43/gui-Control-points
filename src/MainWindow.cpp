@@ -8,47 +8,11 @@
 
 #include "MainWindow.hpp"
 
-#include <QFileDialog>
-#include <QGridLayout>
-#include <QMenuBar>
-#include <QDebug>
-#include <QMenu>
-#include <QMessageBox>
-#include <QSplitter>
-#include <QStatusBar>
-#include <QtGui>
-#include <QWidget>
-#include <iostream>
-#include <fstream>
-
-#include <algorithm>
-#include <clocale>
-
-#include "ControlPoint2DNode.hpp"
-#include "ControlPointTableView.hpp"
-
-#include "openMVG/cameras/Camera_Intrinsics.hpp"
-#include "openMVG/multiview/triangulation_nview.hpp"
-#include "openMVG/sfm/sfm_data_triangulation.hpp"
-#include "openMVG/geometry/rigid_transformation3D_srt.hpp"
-#include <openMVG/geometry/Similarity3.hpp>
-//#include "openMVG/sfm/sfm_data_BA_ceres.hpp>
-#include <openMVG/sfm/sfm_data_transform.hpp>
-#include <openMVG/sfm/sfm_data_BA_ceres.hpp>
-
-#include "openMVG/stl/stl.hpp"
-
 using namespace openMVG;
 using namespace openMVG::cameras;
 using namespace openMVG::sfm;
 
 std::string output_dir;
-
-void MainWindow::help(){
-  /*
-   Usage: ./control_point_Reg <sfm data bin> <output dir>
-   */
-}
 
 void MainWindow::doubleClickImageList(){
   const QModelIndex modelIndex = m_treeView_Images->currentIndex();
@@ -68,10 +32,6 @@ void MainWindow::doubleClickImageList(){
 
   myImage = myImage.scaledToWidth(myLabel->width());
   myLabel->setPixmap(QPixmap::fromImage(myImage));
-
-  //myLabel->setFixedHeight(640);
-  //myLabel->setFixedWidth(480);
-  //myLabel->setScaledContents(true);
 
   std::string output_path = output_dir;
   output_path += "/image_selected.txt";
@@ -147,7 +107,7 @@ void MainWindow::createPanel(char** argv){
   //-- Create left panel
   m_tabWidget = new QTabWidget;
   //-- Create right panel
-  m_widget = new control_point_GUI::GraphicsView(m_doc, this);
+  //m_widget = new control_point_GUI::GraphicsView(m_doc, this);
 
   button = new QPushButton();
   QString text("OK");

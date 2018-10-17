@@ -11,12 +11,18 @@
 
 #include <QtGui>
 #include <QTreeView>
-#include <string>
 #include <QLabel>
 #include <QGridLayout>
-#include <QOpenGLWidget>
+#include <QPushButton>
+#include <QMessageBox>
+#include <QMainWindow>
+#include <QSplitter>
+#include <QStatusBar>
+#include <QWidget>
 
-#include "GraphicsView.hpp"
+#include <iostream>
+#include <string>
+
 #include "document.hpp"
 
 class MainWindow : public QMainWindow{
@@ -30,18 +36,6 @@ private:
   QPushButton* button ;
 
   QStatusBar *m_statusbar;         // Status bar
-  QMenuBar *m_menubar;             // Menu bar
-
-  QMenu *m_menuHelp;               // Menu
-  QMenu *m_menuFile;               // Help
-
-  //Actions
-  QAction * m_open_action;
-  QAction * m_save_action;
-  QAction * m_register_action;
-  QAction * m_edit_cp_action;
-  QAction * m_delete_control_point_action;
-  QAction * m_help_action;
 
   // -- DOCUMENT
   Document m_doc;
@@ -49,13 +43,10 @@ private:
   // -- END DOCUMENT
 
   // -- VIEW
-  control_point_GUI::GraphicsView * m_widget;
+  //control_point_GUI::GraphicsView * m_widget;
   // -- END VIEW
 
   private slots:
-
-  /// Display a brief help
-  void help();
 
   /// handle the event Double Click on the SfM_Data image view list
   /// - Display the chosen image & display view's control point observations
